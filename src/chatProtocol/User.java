@@ -1,13 +1,17 @@
 package chatProtocol;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
+
 
 public class User implements Serializable{
     String id;
     String clave;
     String nombre;
-
+    List<String> contactos;
+    
     public User() {
     }
     
