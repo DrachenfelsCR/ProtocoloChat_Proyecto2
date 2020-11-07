@@ -6,14 +6,17 @@
 package chatProtocol;
 
 import java.io.Serializable;
-
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
 /**
  *
  * @author David
  */
-public class PaqueteDatos implements Serializable {
-    
+@XmlAccessorType(XmlAccessType.FIELD)
+public class PaqueteDatos implements Serializable { 
     private String mensaje;
+    @XmlID
     private String idEmisor;
     private String idReceptor;
 
@@ -21,6 +24,10 @@ public class PaqueteDatos implements Serializable {
         this.mensaje = mensaje;
         this.idEmisor = idEmisor;
         this.idReceptor = idReceptor;
+    }
+
+    public PaqueteDatos() {
+       
     }
    
     public String getMensaje() {
