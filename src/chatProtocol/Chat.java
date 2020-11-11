@@ -16,7 +16,7 @@ import javax.xml.bind.annotation.XmlID;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Chat {
-    private List<String> mensajes;
+    private List<String> mensajes; 
     private String idEmisor;
     private String idReceptor;
     @XmlID
@@ -26,7 +26,7 @@ public class Chat {
         this.mensajes = mensajes;
         this.idEmisor = idEmisor;
         this.idReceptor = idReceptor;
-        this.id = idEmisor+idReceptor;
+        this.id = idEmisor+"Chats";
     }
 
     public Chat() {       
