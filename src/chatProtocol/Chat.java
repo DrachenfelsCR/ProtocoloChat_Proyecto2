@@ -7,23 +7,30 @@ package chatProtocol;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlID;
 /**
  *
  * @author David
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Chat {
     private List<String> mensajes;
     private String idEmisor;
     private String idReceptor;
+    @XmlID
+    private String id;
 
     public Chat(ArrayList<String> mensajes, String idEmisor, String idReceptor) {
         this.mensajes = mensajes;
         this.idEmisor = idEmisor;
         this.idReceptor = idReceptor;
+        this.id = idEmisor+idReceptor;
     }
 
-    
+    public Chat() {       
+    }
 
     public List<String> getMensajes() {
         return mensajes;
