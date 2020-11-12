@@ -30,6 +30,7 @@ public class Chat {
     }
 
     public Chat() {       
+         this.mensajes = new ArrayList<String>();
     }
 
     public List<String> getMensajes() {
